@@ -17,6 +17,7 @@
 
 /* Global
    ================================================================ */
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -30,21 +31,26 @@ body {
 
 /* Layout
    ================================================================ */
+.wrapper {
+  display: grid;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+/* added .columns class and display: flex */
+.columns {
+  display: flex;
+
+}
+
 #main {
-  float: left;
   width: 66.66667%;
 }
 
 #sidebar {
-  float: right;
-  width: 29%;
+  width: 33%;
   margin-top: 108px;
   color: #888;
-}
-
-.wrapper {
-  width: 1080px;
-  margin: 0 auto;
 }
 
 img {
@@ -89,8 +95,6 @@ h3 {
   color: #ccc;
 }
 
-
-
 /* Text Styles
    ================================================================ */
 .more {
@@ -115,8 +119,6 @@ p {
 }
 
 
-
-
 /* Header
    ================================================================ */
 header h1 {
@@ -131,10 +133,14 @@ header h2 {
   color: #888;
 }
 
+/* added display: flex, flex-direction: row, flex-wrap: wrap */
 header nav ul {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 /* Footer
@@ -148,7 +154,6 @@ footer {
 /* Navigation
    ================================================================ */
 header nav ul li {
-  float: left;
   width: 16.66667%;
   margin: 0;
   padding: 0;
@@ -170,6 +175,7 @@ header nav a:hover {
 }
 
 
+
 /* Articles
    ================================================================ */
 article {
@@ -179,9 +185,9 @@ article {
 article p:first-of-type:first-letter {
   font-size: 108px;
   line-height: 1;
-  float: left;
   margin: -10px 10px 0 -8px;
   color: #ddd;
+  float: left;
 }
 
 hr {
@@ -195,6 +201,7 @@ hr {
 .module {
   padding: 27px 0;
   border-bottom: 1px solid #ddd;
+  margin-left: 20px;
 }
 .module:last-of-type {
   border: none;
